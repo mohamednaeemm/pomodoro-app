@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sevillana&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Quintessential", "Roboto", "Handjet";
+    background-color: #111335;
+    color: #f1eeee;
+    height: 100%;    
+    overflow: hidden; 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 3rem; /* Add larger gap between elements */
+}
+
+.container .logo {
+    position: relative;
+    top: -1rem;
+}
+
+.header {
+    display: flex;
+    gap: 14rem;
+    background-color: #06093a;
+    border-radius: 2rem;
+    width:40%;
+    height: 3rem;
+    justify-content: space-between;
+    position: relative;
+    top: -2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+
+.header h1 {
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.header .choice {
+    width: 50%;
+    height: 100%;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+
+.header .study-option {
+    background-color: rgb(255, 0, 0);
+}
+
+/* Timer container */
+.timer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Outer circle */
+.timer .outer-circle {
+    position: relative; 
+    width: 300px; /* Increased size for the outer circle */
+    height: 300px;
+    border-radius: 50%;
+    background-color: #424468;
+    display: flex;   /* Use flex to center inner circle */
+    justify-content: center;
+    align-items: center;
+    top: -2rem;
+} 
+
+
+/* New Middle Circle */
+.timer .middle-circle {
+    position: absolute;
+    width: 100%;  /* Slightly smaller than the outer circle */
+    height: 100%;
+    border-radius: 50%;
+    border: 40px solid rgb(136, 229, 224);  /* Border color to create the ring */
+    background-color: transparent; /* Hollow center */
+    opacity: .6;
+    z-index: 1; /* Between outer and inner circles */
+}
+
+/* Inner circle */
+.timer .inner-circle {
+    width: 80%; /* Inner circle is 80% of outer circle */
+    height: 80%;
+    border-radius: 50%;
+    background-color: #111335;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 1rem;
+    z-index: 2;
+}
+
+.timer .inner-circle .time-duration {
+    font-size: 4rem;
+}
+
+.timer .inner-circle .time-start {
+    cursor: pointer;
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem; 
+}
+
+.timer .option {
+    position: relative;
+    top: 12rem;
+    right: 7rem;
+    cursor: pointer;
+}
+
+button {
+    background: none;
+    border: none;
+    font: inherit; /* Inherit the font properties from the parent */
+    color: inherit; /* Inherit the text color */
+    cursor: pointer; /* Add a pointer cursor on hover */
+}
+
+/* Pop-up Modal */
+.popup {
+    display: none; /* Initially hidden */
+    position: fixed; /* Stays in place relative to the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent dark overlay */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Popup content */
+.popup-content {
+    background-color: #fff;
+    color: black;
+    width: 45vw; /* 50% of the viewport width */
+    height: 85vh; /* 50% of the viewport height */
+    padding: 2rem;
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-content .popup-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+/* Close button for the popup */
+.popup .close {
+    cursor: pointer;
+    position: absolute;
+    right: 3rem;
+}
+
+.first-line {
+    width: 90%;
+    margin: .5rem auto;
+    background-color: gray;
+    opacity: .5;
+    margin-bottom: 1.5rem;
+}
+
+.main-title {
+    letter-spacing: 0.2rem;
+}
+
+.pop-main {
+    display: flex;
+    justify-content: space-around;
+}
+/* Time setting styling */
+.time-setting {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    /* height: 90%; */
+    background-color: rgb(150, 254, 254);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+.label-option {
+    font-size: 1rem;
+    padding: .25rem;
+    margin-left: .6rem;
+    font-size: 1rem;
+}
+
+.time-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+.arrow {
+    cursor: pointer;
+}
+
+#study-time, #break-time {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* FONT  */
+
+.pop-font {
+    margin-bottom: .5rem;
+}
+
+.color-setting, .font-setting {
+    display: flex;
+    justify-content: space-between; /* First element on left, others on right */
+    align-items: center;
+    width: 100%;
+}
+  
+.element {
+    text-align: center;
+}
+  
+.first {
+    margin-right: auto;
+}
+  
+.circle {
+    width: 50px; /* Set a fixed width */
+    height: 50px;
+    border-radius: 50%;
+    opacity: .8;
+    margin:  auto 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    
+}
+
+.font-setting .circle {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+    -webkit-transition: background-color 0.3s, color 0.3s;
+    -moz-transition: background-color 0.3s, color 0.3s;
+    -ms-transition: background-color 0.3s, color 0.3s;
+    -o-transition: background-color 0.3s, color 0.3s;
+}
+  
+  /* Styles for the clicked circle */
+.font-setting .circle.clicked {
+    background-color: black;
+    color: white;
+}
+
+
+
+/* Style for the OK sign */
+.ok-sign {
+    position: absolute;
+    font-size: 2rem;
+    color: black;
+    display: block; /* Hidden by default */
+}
+  
+.ok-visible {
+    display: none; /* Show when clicked */
+}
+
+/* COLOR */
+  
+  /* Different colors for each circle  */
+
+#circle1 {
+    background-color: rgb(136, 229, 224);
+}
+#circle2 {
+    background-color: rgb(253, 133, 207);
+}
+#circle3 {
+    background-color: rgb(178, 236, 107);
+}
+
+.popup-button {
+    margin: 1rem auto;
+    background-color: rgb(150, 254, 254);
+    font-size: 1.2rem;
+    width: 100px;
+    min-height: 40px;
+    letter-spacing: .2rem;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+
+#confetti-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}

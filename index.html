@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Logo Section -->
+        <div class="logo">
+            <img src="assets/logo.svg" alt="Pomodoro App Logo">
+        </div>
+
+        <!-- Header with Options -->
+        <div class="header">
+            <button class="choice study-option">Study</button>
+            <button class="choice break-option">Break</button>
+        </div>
+
+        <!-- Timer Section -->
+        <div class="timer">
+            <div class="outer-circle">
+                <div class="middle-circle"></div>
+                <div class="inner-circle">
+                    <!-- Timer Display -->
+                    <h1 class="time-duration">25:00</h1>
+                    <button class="time-start">Start</button>
+                </div>
+                <div class="option">
+                    <img src="assets/icon-settings.svg" alt="Settings">
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Pop-up Modal -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <section class="popup-header">
+                <h2>Settings</h2>
+                <span class="close"><img alt="close-popup" src="assets/icon-close.svg"></span>
+            </section>
+            <hr class="first-line">
+            <h3 class="main-title">TIME (MINUTES)</h3>
+            <section class="pop-main">
+                <div class="time-setting">
+                    <label for="study-time" class="label-option">Study Time</label>
+                    <div class="time-field">
+                        <button class="arrow up" onclick="adjustTime('study', 5)"><img alt="arrow-up" src="assets/icon-arrow-up.svg"></button>
+                        <span id="study-time">25</span> <!-- Default value -->
+                        <button class="arrow down" onclick="adjustTime('study', -5)"><img alt="arrow-down" src="assets/icon-arrow-down.svg"></button>
+                    </div>
+                </div>
+                <div class="time-setting">
+                    <label for="break-time" class="label-option">Break Time</label>
+                    <div class="time-field">
+                        <button class="arrow up" onclick="adjustTime('break', 5)"><img alt="arrow-up" src="assets/icon-arrow-up.svg"></button>
+                        <span id="break-time">5</span> <!-- Default value -->
+                        <button class="arrow down" onclick="adjustTime('break', -5)"><img alt="arrow-down" src="assets/icon-arrow-down.svg"></button>
+                    </div>
+                </div>
+            </section>
+            <hr class="first-line">
+            <section class="pop-font">
+                <div class="font-setting">
+                    <h3 class="main-title first">FONT</h3>
+                    <div class="element circle font-choice clicked" id="font1" data-font="Quintessential">Aa</div>
+                    <div class="element circle font-choice" id="font2" data-font="Roboto">Aa</div>
+                    <div class="element circle font-choice" id="font3" data-font="Handjet">Aa</div>
+                </div>
+            </section>
+            <section class="pop-color"></section>
+                <div class="color-setting">
+                    <h3 class="main-title first">COLOR</h3>
+                    <div class="element circle" id="circle1">
+                        <div class="ok-sign">✔</div>
+                    </div>
+                    <div class="element circle" id="circle2"></div>
+                    <div class="element circle" id="circle3"></div>
+                </div>
+            </section>
+            <button class="popup-button">APPLY</button>
+            
+        </div>
+    </div>
+    <canvas id="confetti-canvas"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script> <!-- Confetti library -->
+
+    <script src="script.js"></script>
+</body>
+</html>
