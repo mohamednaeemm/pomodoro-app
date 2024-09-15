@@ -244,3 +244,7 @@ popUp.addEventListener('click', (event) => {
 });
 
 startButton.addEventListener('click', startStudyTimer);
+
+window.onload = function() {
+    document.body.style.height = "100%";
+};
