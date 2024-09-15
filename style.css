@@ -25,7 +25,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    gap: 3rem; /* Add larger gap between elements */
+    gap: 3rem;
 }
 
 .container .logo {
@@ -52,19 +52,18 @@ body {
 .header h1 {
     font-size: 2rem;
     color: #fff;
-    cursor: pointer;
 }
 
 .header .choice {
     width: 50%;
     height: 100%;
-    border-radius: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     font-size: 1.5rem;
-
+    cursor: auto;
+    border-radius: 2rem;
     -webkit-border-radius: 2rem;
     -moz-border-radius: 2rem;
     -ms-border-radius: 2rem;
@@ -75,7 +74,6 @@ body {
     background-color: rgb(255, 0, 0);
 }
 
-/* Timer container */
 .timer {
     position: relative;
     display: flex;
@@ -83,35 +81,31 @@ body {
     align-items: center;
 }
 
-/* Outer circle */
 .timer .outer-circle {
     position: relative; 
-    width: 300px; /* Increased size for the outer circle */
+    width: 300px; 
     height: 300px;
     border-radius: 50%;
     background-color: #424468;
-    display: flex;   /* Use flex to center inner circle */
+    display: flex;   
     justify-content: center;
     align-items: center;
     top: -2rem;
 } 
 
-
-/* New Middle Circle */
 .timer .middle-circle {
     position: absolute;
-    width: 100%;  /* Slightly smaller than the outer circle */
+    width: 100%; 
     height: 100%;
     border-radius: 50%;
-    border: 40px solid rgb(136, 229, 224);  /* Border color to create the ring */
+    border: 40px solid rgb(136, 229, 224);
     background-color: transparent; /* Hollow center */
     opacity: .6;
     z-index: 1; /* Between outer and inner circles */
 }
 
-/* Inner circle */
 .timer .inner-circle {
-    width: 80%; /* Inner circle is 80% of outer circle */
+    width: 80%; 
     height: 80%;
     border-radius: 50%;
     background-color: #111335;
@@ -145,31 +139,31 @@ body {
 button {
     background: none;
     border: none;
-    font: inherit; /* Inherit the font properties from the parent */
-    color: inherit; /* Inherit the text color */
-    cursor: pointer; /* Add a pointer cursor on hover */
+    font: inherit; 
+    color: inherit; 
+    cursor: pointer; 
 }
 
 /* Pop-up Modal */
 .popup {
     display: none; /* Initially hidden */
-    position: fixed; /* Stays in place relative to the viewport */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent dark overlay */
+    background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Ensure it's above other content */
+    z-index: 1000;
 }
 
 /* Popup content */
 .popup-content {
     background-color: #fff;
     color: black;
-    width: 45vw; /* 50% of the viewport width */
-    height: 85vh; /* 50% of the viewport height */
+    width: 45vw;
+    height: 85vh; 
     padding: 2rem;
     border-radius: 1rem;
     position: relative;
@@ -206,13 +200,13 @@ button {
     display: flex;
     justify-content: space-around;
 }
+
 /* Time setting styling */
 .time-setting {
     margin: 1rem 0;
     display: flex;
     flex-direction: column;
     width: 20%;
-    /* height: 90%; */
     background-color: rgb(150, 254, 254);
     border-radius: 1rem;
     -webkit-border-radius: 1rem;
@@ -224,8 +218,7 @@ button {
 .label-option {
     font-size: 1rem;
     padding: .25rem;
-    margin-left: .6rem;
-    font-size: 1rem;
+    margin: 0 auto;
 }
 
 .time-field {
@@ -235,7 +228,6 @@ button {
     justify-content: center;
     gap: 1rem;
 }
-
 
 .arrow {
     cursor: pointer;
@@ -254,7 +246,7 @@ button {
 
 .color-setting, .font-setting {
     display: flex;
-    justify-content: space-between; /* First element on left, others on right */
+    justify-content: space-between;
     align-items: center;
     width: 100%;
 }
@@ -268,7 +260,7 @@ button {
 }
   
 .circle {
-    width: 50px; /* Set a fixed width */
+    width: 50px;
     height: 50px;
     border-radius: 50%;
     opacity: .8;
@@ -279,7 +271,6 @@ button {
     font-size: 1.5rem;
     cursor: pointer;
     position: relative;
-    
 }
 
 .font-setting .circle {
@@ -313,9 +304,6 @@ button {
 }
 
 /* COLOR */
-  
-  /* Different colors for each circle  */
-
 #circle1 {
     background-color: rgb(136, 229, 224);
 }
@@ -334,10 +322,10 @@ button {
     min-height: 40px;
     letter-spacing: .2rem;
     border-radius: 2rem;
-    -webkit-border-radius: 2rem;
-    -moz-border-radius: 2rem;
-    -ms-border-radius: 2rem;
-    -o-border-radius: 2rem;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
 }
 
 #confetti-canvas {
@@ -348,4 +336,99 @@ button {
     height: 100%;
     pointer-events: none;
     z-index: 9999;
+}
+
+@media (min-width: 700px) and (max-width: 1100px) {
+    .header {
+        gap: 5rem; 
+    }
+
+    .timer .outer-circle {
+        width: 280px;
+        height: 280px;
+    }
+
+    .timer .inner-circle .time-duration {
+        font-size: 3rem;
+    }
+
+    .popup-content {
+        width: 80%;
+        height: 50vh;
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .label-option {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .time-setting {
+        margin: 2rem 0;
+        height: 80%;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 700px) {
+    .header {
+        gap: .1rem;
+        padding: 0;
+        width: 70%;
+    }
+
+    .header .choice {
+        width: 100%;
+    }
+
+    .timer .outer-circle {
+        width: 250px;
+        height: 250px;
+    }
+
+    .timer .inner-circle .time-duration {
+        font-size: 2rem;
+    }
+
+    
+
+    .time-setting {
+        margin: 1rem auto;
+        width: 35%;
+    }
+
+    .timer .option {
+        right: 6rem;
+    }
+
+    .popup-content {
+        width: 80%;
+        height: 60%;
+        padding: 1rem;
+    }
+
+    .popup .close {
+        top: 1.8rem;
+        right: 2.5rem;
+    }
+
+    .time-field {
+        gap: .5rem;
+    }
+
+    .main-title {
+        letter-spacing: 0.1rem;
+        font-size: .9rem;
+    }
+
+    #study-time, #break-time {
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    .circle {
+        margin:  auto 1rem;
+        font-size: 1.2rem;
+    }
 }
