@@ -373,7 +373,7 @@ button {
 /* Mobile devices */
 @media (max-width: 700px) {
     .container {
-        margin-top: -1rem;
+        margin: auto 0;
     }
 
     .header {
