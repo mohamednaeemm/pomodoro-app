@@ -322,10 +322,10 @@ button {
     min-height: 40px;
     letter-spacing: .2rem;
     border-radius: 2rem;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
 }
 
 #confetti-canvas {
@@ -349,7 +349,7 @@ button {
     }
 
     .timer .inner-circle .time-duration {
-        font-size: 3rem;
+        font-size: 4rem;
     }
 
     .popup-content {
@@ -388,7 +388,7 @@ button {
     }
 
     .timer .inner-circle .time-duration {
-        font-size: 2rem;
+        font-size: 3.2rem;
     }
 
     
