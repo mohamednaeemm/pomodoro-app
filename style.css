@@ -428,7 +428,7 @@ button {
     }
 
     .circle {
-        margin:  auto 1rem;
+        margin:  auto .8rem;
         font-size: 1.2rem;
     }
 }
