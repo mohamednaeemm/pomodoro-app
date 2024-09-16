@@ -361,6 +361,11 @@ button {
 }
 
 @media (min-width: 650px) and (max-width: 1100px) {
+    .container {
+        position: relative;
+        top: -3rem;
+    }
+    
     .header {
         gap: 5rem; 
         min-width: 40%;
@@ -381,7 +386,7 @@ button {
 
     .popup-content {
         min-width: 60%;
-        /* max-height: 75vh; */
+        top: -2rem;
         padding: 2.5rem;
         font-size: 1.5rem;
     }
