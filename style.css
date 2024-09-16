@@ -2,8 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Quintessential&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sevillana&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 * {
     margin: 0;
@@ -12,7 +11,7 @@
 }
 
 body {
-    font-family: "Quintessential", "Roboto", "Handjet";
+    font-family: "Quintessential", "Roboto", "Playfair Display";
     background-color: #111335;
     color: #f1eeee;
     height: 100%;    
@@ -442,6 +441,7 @@ button {
         width: 80%;
         min-height: 60vh;
         padding: 1rem;
+        padding-bottom: 1rem;
         top: -2rem;
     }
 
