@@ -174,7 +174,7 @@ button {
     background-color: #fff;
     color: black;
     width: 45vw;
-    min-height: 85vh;
+    max-height: 95vh;
     padding: 2rem;
     position: relative;
     display: flex;
@@ -381,7 +381,7 @@ button {
 
     .popup-content {
         min-width: 60%;
-        min-height: 75vh;
+        /* max-height: 75vh; */
         padding: 2.5rem;
         font-size: 1.5rem;
     }
